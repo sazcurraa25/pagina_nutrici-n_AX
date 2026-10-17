@@ -1,0 +1,54 @@
+{
+  "_comment": "PLACEHOLDER — Reglas de disponibilidad. Días: 1=lunes … 7=domingo. Horarios en hora de Argentina (24 h). modality de cada franja: presencial | online | ambas.",
+  "timezone": "America/Argentina/Buenos_Aires",
+  "slotIntervalMinutes": 30,
+  "bufferMinutes": 15,
+  "minNoticeHours": 12,
+  "maxDaysAhead": 30,
+  "cancellationNoticeHours": 24,
+  "appointmentTypes": [
+    {
+      "id": "primera",
+      "label": "Primera consulta",
+      "shortLabel": "primera vez",
+      "durationMinutes": 60,
+      "description": "Conocernos, revisar tu historia y tus hábitos, y definir objetivos.",
+      "modalities": ["presencial", "online"]
+    },
+    {
+      "id": "control",
+      "label": "Control / seguimiento",
+      "shortLabel": "de control",
+      "durationMinutes": 40,
+      "description": "Para pacientes en tratamiento: revisamos avances y ajustamos el plan.",
+      "modalities": ["presencial", "online"]
+    },
+    {
+      "id": "online",
+      "label": "Consulta online",
+      "shortLabel": "online",
+      "durationMinutes": 45,
+      "description": "Por videollamada de Google Meet. Te llega el link por mail.",
+      "modalities": ["online"]
+    }
+  ],
+  "weekly": [
+    { "day": 1, "from": "09:00", "to": "13:00", "modality": "presencial" },
+    { "day": 1, "from": "16:00", "to": "20:00", "modality": "presencial" },
+    { "day": 2, "from": "14:00", "to": "19:00", "modality": "online" },
+    { "day": 3, "from": "09:00", "to": "13:00", "modality": "presencial" },
+    { "day": 3, "from": "16:00", "to": "20:00", "modality": "ambas" },
+    { "day": 4, "from": "14:00", "to": "19:00", "modality": "online" },
+    { "day": 5, "from": "09:00", "to": "14:00", "modality": "ambas" }
+  ],
+  "blocked": [
+    { "from": "2027-01-04", "to": "2027-01-17", "reason": "Vacaciones (PLACEHOLDER)" }
+  ],
+  "holidays": [
+    { "date": "2026-10-12", "name": "Día del Respeto a la Diversidad Cultural" },
+    { "date": "2026-11-23", "name": "Día de la Soberanía Nacional" },
+    { "date": "2026-12-08", "name": "Inmaculada Concepción de María" },
+    { "date": "2026-12-25", "name": "Navidad" },
+    { "date": "2027-01-01", "name": "Año Nuevo" }
+  ]
+}

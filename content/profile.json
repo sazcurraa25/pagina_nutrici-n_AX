@@ -1,0 +1,66 @@
+{
+  "_comment": "PLACEHOLDER — reemplazar todos los datos por los reales antes de publicar. Ver checklist legal en README.",
+  "name": "Lic. Nombre Apellido",
+  "fullName": "Nombre Apellido",
+  "title": "Licenciada en Nutrición",
+  "shortTitle": "Lic. en Nutrición",
+  "license": "M.P. N° 0000",
+  "university": "Universidad Nacional de La Plata (PLACEHOLDER)",
+  "postgrads": [
+    "Especialización en Nutrición Clínica (PLACEHOLDER)",
+    "Diplomatura en Nutrición Deportiva (PLACEHOLDER)"
+  ],
+  "tagline": "Te acompaño a construir una forma de comer que se adapte a tu vida, sin culpa y con información clara.",
+  "photo": {
+    "src": "/images/profesional-placeholder.svg",
+    "alt": "Retrato de la licenciada en su consultorio, con luz natural"
+  },
+  "officePhoto": {
+    "src": "/images/consultorio-placeholder.svg",
+    "alt": "Mesa de madera del consultorio con alimentos frescos"
+  },
+  "bio": [
+    "Soy licenciada en Nutrición y trabajo hace varios años acompañando a personas de todas las edades en su relación con la comida. (PLACEHOLDER)",
+    "Mi forma de trabajar parte de escucharte: tus horarios, tus gustos, tu historia y lo que hoy te resulta posible. Con eso armamos juntos un plan realista, que puedas sostener en el tiempo."
+  ],
+  "approach": "Trabajo desde un enfoque integral y respetuoso: educación alimentaria, objetivos alcanzables y seguimiento cercano. No uso dietas restrictivas genéricas; cada plan se diseña para vos.",
+  "modalities": [
+    {
+      "type": "presencial",
+      "title": "Presencial",
+      "description": "En el consultorio, con turnos programados."
+    },
+    {
+      "type": "online",
+      "title": "Online",
+      "description": "Por videollamada (Google Meet), desde donde estés."
+    }
+  ],
+  "insurances": ["OSDE (PLACEHOLDER)", "IOMA (PLACEHOLDER)", "Swiss Medical (PLACEHOLDER)"],
+  "insurancesNote": "Consultá por reintegros con tu obra social o prepaga.",
+  "contact": {
+    "phone": "+54 221 000-0000",
+    "phoneHref": "+542210000000",
+    "whatsapp": "5492210000000",
+    "whatsappMessage": "Hola, quería hacer una consulta sobre los turnos de nutrición.",
+    "email": "consultas@ejemplo.com.ar"
+  },
+  "address": {
+    "street": "Calle 00 N° 000, 1° piso (PLACEHOLDER)",
+    "city": "La Plata",
+    "province": "Provincia de Buenos Aires",
+    "postalCode": "1900",
+    "country": "AR",
+    "mapQuery": "Plaza Moreno, La Plata, Buenos Aires",
+    "lat": -34.9214,
+    "lng": -57.9545
+  },
+  "serviceArea": ["La Plata", "Gran La Plata", "Provincia de Buenos Aires", "Argentina (online)"],
+  "social": [
+    {
+      "network": "instagram",
+      "label": "Instagram",
+      "url": "https://instagram.com/placeholder"
+    }
+  ]
+}

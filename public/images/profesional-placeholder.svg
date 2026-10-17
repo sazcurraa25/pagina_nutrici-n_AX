@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EEF2EC"/>
+      <stop offset="1" stop-color="#E4DED4"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#g)"/>
+  <circle cx="400" cy="380" r="130" fill="#C9D6CC"/>
+  <path d="M170 1000c0-170 103-290 230-290s230 120 230 290z" fill="#C9D6CC"/>
+  <text x="400" y="940" text-anchor="middle" font-family="sans-serif" font-size="28" fill="#6E675F">Foto profesional (PLACEHOLDER)</text>
+</svg>

@@ -1,0 +1,54 @@
+{
+  "_comment": "PLACEHOLDER — Enfoques de trabajo. Sin precios ni promesas de resultados (Reglamento de Publicidad del Colegio). Íconos disponibles: ver lib/content/schemas.ts (approachIcons).",
+  "items": [
+    {
+      "id": "saludable",
+      "icon": "salad",
+      "title": "Alimentación saludable y educación alimentaria",
+      "forWhom": "Para quienes quieren ordenar sus comidas, entender etiquetas y comer mejor en el día a día.",
+      "includes": ["Evaluación de hábitos actuales", "Plan adaptado a tu rutina", "Herramientas para compras y organización"]
+    },
+    {
+      "id": "peso",
+      "icon": "scale",
+      "title": "Descenso o aumento de peso",
+      "forWhom": "Para personas que buscan modificar su peso de forma gradual y cuidada.",
+      "includes": ["Evaluación antropométrica", "Plan alimentario personalizado", "Seguimiento y ajustes periódicos"]
+    },
+    {
+      "id": "deportiva",
+      "icon": "dumbbell",
+      "title": "Nutrición deportiva",
+      "forWhom": "Para quienes entrenan, de forma recreativa o competitiva.",
+      "includes": ["Alimentación según tipo de entrenamiento", "Hidratación y momentos de comida", "Planificación para competencias"]
+    },
+    {
+      "id": "vegetariana",
+      "icon": "sprout",
+      "title": "Alimentación vegetariana y vegana",
+      "forWhom": "Para quienes siguen o quieren empezar una alimentación basada en plantas.",
+      "includes": ["Revisión de nutrientes clave", "Combinaciones y recetas prácticas", "Orientación sobre suplementación cuando corresponde"]
+    },
+    {
+      "id": "embarazo",
+      "icon": "heart",
+      "title": "Embarazo y lactancia",
+      "forWhom": "Para personas gestantes y en período de lactancia.",
+      "includes": ["Necesidades nutricionales por etapa", "Manejo de síntomas frecuentes", "Trabajo coordinado con tu equipo de salud"]
+    },
+    {
+      "id": "patologias",
+      "icon": "stethoscope",
+      "title": "Patologías: diabetes, hipertensión, celiaquía",
+      "forWhom": "Para personas con indicación médica de un tratamiento nutricional.",
+      "includes": ["Plan acorde a tu diagnóstico", "Lectura de etiquetas y alimentos aptos", "Comunicación con tu médico/a tratante"]
+    },
+    {
+      "id": "infantil",
+      "icon": "baby",
+      "title": "Nutrición infantil",
+      "forWhom": "Para familias con niñas y niños, desde la alimentación complementaria.",
+      "includes": ["Incorporación de alimentos", "Ideas para viandas y meriendas", "Acompañamiento a toda la familia"]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "_comment": "PLACEHOLDER — Preguntas frecuentes. Revisar con la profesional.",
+  "items": [
+    {
+      "question": "¿Qué tengo que llevar a la primera consulta?",
+      "answer": "Si tenés estudios de laboratorio recientes (de los últimos 6 meses) o indicaciones de otros profesionales, traelos. También ayuda anotar qué comiste durante 2 o 3 días antes de la consulta, sin cambiar nada."
+    },
+    {
+      "question": "¿Cuánto dura cada consulta?",
+      "answer": "La primera consulta dura alrededor de 60 minutos. Los controles duran unos 40 minutos y las consultas online, 45 minutos."
+    },
+    {
+      "question": "¿Cómo cancelo o reprogramo un turno?",
+      "answer": "En el mail de confirmación tenés un link para cancelar. Te pido que lo hagas con al menos 24 horas de anticipación, así el horario queda libre para otra persona. Si necesitás reprogramar con menos tiempo, escribime por WhatsApp."
+    },
+    {
+      "question": "¿Qué diferencia hay entre la consulta online y la presencial?",
+      "answer": "El contenido es el mismo: evaluación, plan y seguimiento. En la presencial puedo tomar medidas antropométricas en el consultorio; en la online trabajamos con datos que vos registrás y te envío el material por mail."
+    },
+    {
+      "question": "¿Atienden por obra social?",
+      "answer": "Trabajo con algunas obras sociales y prepagas, y con otras por sistema de reintegro. Consultame por WhatsApp con el nombre de tu cobertura y te cuento cómo es en tu caso."
+    },
+    {
+      "question": "¿Necesito una derivación médica?",
+      "answer": "No es obligatoria. Si tenés una patología diagnosticada, es útil que traigas la indicación de tu médico/a para trabajar de forma coordinada."
+    }
+  ]
+}

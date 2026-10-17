@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens — "consultorio luminoso".
+ * Contraste AA verificado (ratio sobre --color-bg):
+ *   text 13.3 · muted 5.2 · primary-dark 7.1 · accent-text 5.0 · blanco sobre primary 4.7
+ * --color-primary (#5B7B65) da 4.4 sobre crema: NO usarlo para texto chico;
+ * para links/texto usar --color-primary-dark. --color-accent solo para íconos/detalles.
+ */
+:root {
+  --color-bg: #faf7f2;
+  --color-surface: #ffffff;
+  --color-surface-alt: #eef2ec;
+  --color-primary: #5b7b65;
+  --color-primary-dark: #3f5a48;
+  --color-on-primary: #ffffff;
+  --color-accent: #c9805e;
+  --color-accent-text: #9a5a3c;
+  --color-text: #2e2a26;
+  --color-muted: #6e675f;
+  --color-border: #e4ded4;
+  --color-danger: #a23b2c;
+  --shadow-soft: 0 1px 2px rgb(46 42 38 / 0.04), 0 8px 24px -12px rgb(46 42 38 / 0.12);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #1c1a17;
+    --color-surface: #24211d;
+    --color-surface-alt: #212922;
+    --color-primary: #9cbba5;
+    --color-primary-dark: #b9d2c0;
+    --color-on-primary: #1c1a17;
+    --color-accent: #d9997a;
+    --color-accent-text: #e0a98c;
+    --color-text: #efe9e1;
+    --color-muted: #b5ada3;
+    --color-border: #3a352f;
+    --color-danger: #f0a090;
+    --shadow-soft: 0 1px 2px rgb(0 0 0 / 0.2), 0 8px 24px -12px rgb(0 0 0 / 0.5);
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-surface-alt: var(--color-surface-alt);
+  --color-primary: var(--color-primary);
+  --color-primary-dark: var(--color-primary-dark);
+  --color-on-primary: var(--color-on-primary);
+  --color-accent: var(--color-accent);
+  --color-accent-text: var(--color-accent-text);
+  --color-text: var(--color-text);
+  --color-muted: var(--color-muted);
+  --color-border: var(--color-border);
+  --color-danger: var(--color-danger);
+
+  --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 12px;
+  --shadow-soft: var(--shadow-soft);
+
+  /* Escala fluida */
+  --text-body: clamp(1.0625rem, 1rem + 0.2vw, 1.125rem);
+  --text-h1: clamp(2.5rem, 1.6rem + 4vw, 4.25rem);
+  --text-h2: clamp(2rem, 1.5rem + 2vw, 2.875rem);
+  --text-h3: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    text-wrap: balance;
+  }
+  a {
+    color: var(--color-primary-dark);
+    /* Subrayado por defecto: los enlaces dentro de texto no deben distinguirse solo por color
+       (WCAG 1.4.1). Los botones/links con `.no-underline` lo anulan por especificidad. */
+    text-decoration-line: underline;
+    text-underline-offset: 0.15em;
+    text-decoration-thickness: 1px;
+    text-decoration-color: color-mix(in srgb, var(--color-primary-dark) 45%, transparent);
+  }
+  a:hover {
+    text-decoration-color: currentColor;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-primary-dark);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  ::selection {
+    background: color-mix(in srgb, var(--color-primary) 25%, transparent);
+  }
+}
+
+@layer components {
+  .container-site {
+    width: 100%;
+    max-width: 1120px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 640px) {
+    .container-site { padding-inline: 1.5rem; }
+  }
+  .eyebrow {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-accent-text);
+  }
+  .prose-legal h2 { font-size: var(--text-h3); margin-top: 2.25rem; margin-bottom: 0.75rem; }
+  .prose-legal p, .prose-legal ul { margin-bottom: 1rem; }
+  .prose-legal ul { list-style: disc; padding-left: 1.25rem; }
+  .prose-legal li { margin-bottom: 0.35rem; }
+}
+
+/* Entrada suave al viewport (ver components/ui/reveal.tsx).
+   Solo se oculta si hay JS (clase .js en <html>), así sin JS todo se ve. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 280ms ease-out, transform 280ms ease-out;
+}
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

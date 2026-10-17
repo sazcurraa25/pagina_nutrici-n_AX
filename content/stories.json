@@ -1,0 +1,41 @@
+{
+  "_comment": "PLACEHOLDER — Testimonios ANONIMIZADOS. Máximo: nombre de pila o inicial + edad aproximada. Nunca kilos, métricas, fotos de antes/después ni promesas. Cada historia requiere 'consent': true (consentimiento escrito del paciente). Esta sección requiere autorización previa del Consejo Directivo del Colegio de Nutricionistas de la Prov. de Buenos Aires antes de publicarse. Se oculta completa con SHOW_STORIES=false.",
+  "items": [
+    {
+      "id": "h1",
+      "alias": "M.",
+      "approxAge": "40 y pico",
+      "approach": "saludable",
+      "text": "Me sentí escuchada desde la primera consulta. Pude ordenar mis comidas sin sentir que estaba a dieta, y entender por qué hacía cada cambio.",
+      "consent": true,
+      "published": true
+    },
+    {
+      "id": "h2",
+      "alias": "Lucas",
+      "approxAge": "alrededor de 30",
+      "approach": "deportiva",
+      "text": "Buscaba organizar la alimentación con mis entrenamientos. Me ayudó mucho tener un plan pensado para mis horarios reales y poder consultar dudas entre turnos.",
+      "consent": true,
+      "published": true
+    },
+    {
+      "id": "h3",
+      "alias": "C.",
+      "approxAge": "50 y pico",
+      "approach": "patologias",
+      "text": "Después del diagnóstico estaba muy perdida con qué comer. El acompañamiento fue paciente y claro, y hoy me siento mucho más segura al hacer las compras.",
+      "consent": true,
+      "published": true
+    },
+    {
+      "id": "h4",
+      "alias": "Sofía",
+      "approxAge": "cerca de 35",
+      "approach": "embarazo",
+      "text": "Durante el embarazo tenía mil dudas. Las consultas online me resultaron muy cómodas y siempre me sentí acompañada.",
+      "consent": true,
+      "published": false
+    }
+  ]
+}
