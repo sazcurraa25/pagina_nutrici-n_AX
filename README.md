@@ -21,9 +21,10 @@ Sitio profesional para un/a Licenciado/a en Nutrición de la Provincia de Buenos
 5. [Usar Cal.com en lugar de Google](#usar-calcom-en-lugar-de-google)
 6. [Variables de entorno](#variables-de-entorno)
 7. [Deploy en Vercel](#deploy-en-vercel)
-8. [Tests](#tests)
-9. [Checklist legal antes de publicar](#checklist-legal-antes-de-publicar)
-10. [Arquitectura y decisiones](#arquitectura-y-decisiones)
+8. [Deploy en Netlify](#deploy-en-netlify-alternativa-a-vercel)
+9. [Tests](#tests)
+10. [Checklist legal antes de publicar](#checklist-legal-antes-de-publicar)
+11. [Arquitectura y decisiones](#arquitectura-y-decisiones)
 
 ---
 
@@ -263,6 +264,21 @@ Nunca subas `.env.local` al repositorio (ya está en `.gitignore`). Las credenci
 7. **Turnstile:** en <https://dash.cloudflare.com> → Turnstile → *Add site*, agregá el dominio y copiá las claves en Vercel.
 
 > No hace falta cambiar nada en Google Cloud para el deploy: la URI `http://localhost:53682/oauth2callback` solo se usa para obtener el refresh token desde tu computadora.
+
+---
+
+## Deploy en Netlify (alternativa a Vercel)
+
+El sitio también corre en Netlify con el adaptador oficial de Next.js: las route handlers, la página de cancelación y la imagen Open Graph se ejecutan como Netlify Functions (no es un export estático).
+
+1. En <https://app.netlify.com> → **Add new site → Import an existing project** y elegí el repositorio.
+2. Netlify detecta Next.js y lee `netlify.toml` (ya incluido): fija Node 22.12 y activa el plugin `@netlify/plugin-nextjs`. No cambies el comando de build.
+3. **Site settings → Environment variables:** cargá las mismas variables que en la tabla de arriba (`BOOKING_PROVIDER`, `BOOKING_SECRET`, las de Google, Turnstile, `NEXT_PUBLIC_SITE_URL`).
+4. Deploy. Después agregá tu dominio en **Domain management** (HTTPS automático).
+
+**Analítica en Netlify.** Vercel Analytics solo registra en Vercel. En Netlify usá **Plausible** (sin cookies): configurá la variable `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` con tu dominio y el sitio carga el script de Plausible, que ya excluye las rutas `/turno/cancelar/*` para no registrar los tokens. También podés usar la analítica propia de Netlify (por logs del servidor), que se activa desde el panel y no necesita variable. En ambos casos, sin cookies: no hace falta banner.
+
+Los headers de seguridad de `next.config.ts` los respeta el adaptador. El rate limiting y la caché siguen siendo por instancia (igual que en Vercel).
 
 ---
 
