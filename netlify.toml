@@ -1,0 +1,13 @@
+# Configuración para deployar en Netlify.
+# El plugin oficial de Next.js corre las route handlers, la página dinámica de
+# cancelación y la imagen Open Graph como Netlify Functions (no es export estático).
+
+[build]
+  command = "next build"
+
+[build.environment]
+  # Los scripts de Google y las dependencias requieren Node 22.12+ (ver package.json "engines").
+  NODE_VERSION = "22.12.0"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

@@ -86,7 +86,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <Footer />
         <WhatsAppFab />
-        <SiteAnalytics />
+        <SiteAnalytics vercel={!!process.env.VERCEL} plausibleDomain={process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN} />
       </body>
     </html>
   );
